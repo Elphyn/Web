@@ -1,12 +1,11 @@
-.flex{
-    display: flex;
+#button {
+    border: none;
+    width: 200px;
+    height: 70px;
+    background-color: darkred;
+    color: white;
 }
 
-#blue-box{
-    background-color: skyblue;
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    justify-content: center;
-    align-items: center;
+#h1 {
+    font-size: 30px;
 }
