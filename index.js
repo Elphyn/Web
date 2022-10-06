@@ -1,20 +1,12 @@
+const left = document.getElementById("left-side");
 
-let count = 0
-const countEL = document.getElementById("h1")
-const bigBtn = document.getElementById("big")
+const handleOnMove = e => {
+    const p = e.clientX / window.innerWidth * 100;
 
-function increment(){
-    count = count + 1
-    countEL.innerText = count
+    left.style.width = `${p}%`
 
-}
+} 
 
-function save(){
-    console.log("Saved: ",countEL.innerText)
-}
+document.onmousemove = e => handleOnMove(e);
 
-function del(){
-    count = 0
-    countEL.innerText = count
-    console.log("Reset count")
-}
+document.ontouchmove = e => handleOnMove(e.touches[0]);
